@@ -6,6 +6,8 @@ attr_accessor :backers
 def initialize(title)
   @title = title
   @backers = []
+  @project = []
+  @project << self
 end
 
 
