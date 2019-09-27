@@ -12,8 +12,7 @@ class Backer
     new_project = Project.new(project)
       new_project.backer = self
   end
-end
-end
+
 
 #backer_instance . back_project
 # describe 'Backer - #back_project' do
@@ -22,8 +21,8 @@ end
 #     magic = Project.new("Magic The Gathering Thing")
 
     # If we are calling this method in this way, what type of argument is it taking?
-    # We are actually passing in a Project object! Cool, huh?
-    spencer.back_project(magic)
-    expect(spencer.backed_projects).to include(magic)
+    # # We are actually passing in a Project object! Cool, huh?
+    # spencer.back_project(magic)
+    # expect(spencer.backed_projects).to include(magic)
   end
 end
