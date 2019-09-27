@@ -12,7 +12,7 @@ class Backer
     new_project = Project.new(project)
       new_project.backer = self
   end
-
+end
 end
 
 #backer_instance . back_project
