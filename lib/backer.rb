@@ -24,5 +24,5 @@ class Backer
     # # We are actually passing in a Project object! Cool, huh?
     # spencer.back_project(magic)
     # expect(spencer.backed_projects).to include(magic)
-  end
+
 end
