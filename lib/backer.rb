@@ -13,8 +13,6 @@ class Backer
     end
 
 
-  end
-
 
 #backer_instance . back_project
 # describe 'Backer - #back_project' do
