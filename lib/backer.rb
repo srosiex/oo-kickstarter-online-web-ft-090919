@@ -7,20 +7,23 @@ class Backer
     @backed_projects = []
   end
 
-def back_project(project)
+  def back_project(project)
   # @backed_projects << Project(project).new
-
-end
+    new_project = Project.new(project)
+      new_project.backer = self
+  end
 
 end
 
 #backer_instance . back_project
-# describe 'Project - #add_backer' do
-#   it 'accepts a Backer as an argument and stores it in a backers array' do
-#     book = Project.new("Ruby, Ruby, and More Ruby")
-#     steven = Backer.new("Steven")
-#
-#     # Same here. We are actually passing around a Backer object. This is pretty
-#     # simple functionality, but objects can interact with one another in really
-#     # cool ways.
-#     book.add_backer(steven)
+describe 'Backer - #back_project' do
+  it 'accepts a Project as an argument and stores it in a backed_projects array' do
+    spencer = Backer.new("Spencer")
+    magic = Project.new("Magic The Gathering Thing")
+
+    # If we are calling this method in this way, what type of argument is it taking?
+    # We are actually passing in a Project object! Cool, huh?
+    spencer.back_project(magic)
+    expect(spencer.backed_projects).to include(magic)
+  end
+end
